@@ -1,0 +1,54 @@
+<!-- A To Do List App with Javascript -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div>
+        <h1>To Do List</h1>
+        <h2>Tracking your tasks</h2>
+    </div>
+    <div>
+        <ul></ul>
+        <script>
+            let tasks = {1: "Task 1", 2: "Task 2", 3: "Task 3"};
+            let ul = document.querySelector('ul');
+            Object.entries(tasks).forEach(([key, value]) => {
+                const li = document.createElement('li');
+                li.textContent = value;
+                ul.appendChild(li);
+            });
+            
+            // activity.innerHTML = "<li>task 1</li>";
+        </script>
+    </div>
+    <form>
+        <fieldset>
+            <legend>Add Tasks</legend>
+            <label for="task-id">Task Id</label>
+            <input type="number" id="task-id" placeholder="Input Task Id">
+            <label for="task-name">Task Name</label>
+            <input type="text" id="task-name" placeholder="Input Task">
+        </fieldset>
+
+        <fieldset>
+            <legend>Update Tasks</legend>
+            <label for="task-id">Task Id</label>
+            <input type="number" id="task-id" placeholder="Input Task Id">
+            <label for="task-name">Task Name</label>
+            <input type="text" id="task-name" placeholder="Input Updated Task">
+        </fieldset>
+
+        <fieldset>
+            <legend>Update Tasks</legend>
+            <label for="task-id">Task Id</label>
+            <input type="number" id="task-id" placeholder="Input Task Id">
+        </fieldset>
+    </form>
+</body>
+</html>
