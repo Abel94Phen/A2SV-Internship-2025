@@ -16,15 +16,7 @@
     <div>
         <ul></ul>
         <script>
-            let tasks = {1: "Task 1", 2: "Task 2", 3: "Task 3"};
-            let ul = document.querySelector('ul');
-            Object.entries(tasks).forEach(([key, value]) => {
-                const li = document.createElement('li');
-                li.textContent = value;
-                ul.appendChild(li);
-            });
             
-            // activity.innerHTML = "<li>task 1</li>";
         </script>
     </div>
     <form>
@@ -32,22 +24,25 @@
             <legend>Add Tasks</legend>
             <label for="task-id">Task Id</label>
             <input type="number" id="task-id" placeholder="Input Task Id">
+            <br>
             <label for="task-name">Task Name</label>
             <input type="text" id="task-name" placeholder="Input Task">
         </fieldset>
-
+        
         <fieldset>
             <legend>Update Tasks</legend>
             <label for="task-id">Task Id</label>
             <input type="number" id="task-id" placeholder="Input Task Id">
+            <br>
             <label for="task-name">Task Name</label>
             <input type="text" id="task-name" placeholder="Input Updated Task">
         </fieldset>
-
+        
         <fieldset>
-            <legend>Update Tasks</legend>
+            <legend>Delete Task</legend>
             <label for="task-id">Task Id</label>
             <input type="number" id="task-id" placeholder="Input Task Id">
+            <br>
         </fieldset>
     </form>
 </body>
