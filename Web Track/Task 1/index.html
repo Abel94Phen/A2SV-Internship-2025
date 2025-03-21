@@ -1,4 +1,3 @@
-<!-- A To Do List App with Javascript -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div>
         <h1>To Do List</h1>
-        <h2>Tracking your tasks</h2>
+        <h3><em>Tracking your tasks<em></h3>
+        <div id="task-list" class="task-container"></div>
     </div>
     <div>
         <ul></ul>
@@ -19,31 +20,39 @@
             
         </script>
     </div>
-    <form>
-        <fieldset>
-            <legend>Add Tasks</legend>
-            <label for="task-id">Task Id</label>
-            <input type="number" id="task-id" placeholder="Input Task Id">
-            <br>
-            <label for="task-name">Task Name</label>
-            <input type="text" id="task-name" placeholder="Input Task">
-        </fieldset>
+    <div class="form-container">
+        <form id="task-form">
+            <fieldset>
+                <legend>Add Tasks</legend>
+                <label for="task-name">Task Name</label>
+                <input type="text" id="task-name" placeholder="Input Task">
+                <label for="task-status">Status</label>
+                <input type="text" id="task-status" placeholder="Input Status">
+                <button id="add-task-button" type="submit">Add Task</button>
+            </fieldset>
+        </form>
         
-        <fieldset>
-            <legend>Update Tasks</legend>
-            <label for="task-id">Task Id</label>
-            <input type="number" id="task-id" placeholder="Input Task Id">
-            <br>
-            <label for="task-name">Task Name</label>
-            <input type="text" id="task-name" placeholder="Input Updated Task">
-        </fieldset>
+        <form id="update-task-form">
+            <fieldset>
+                <legend>Update Tasks</legend>
+                <label for="update-task-id">Task Id</label>
+                <input type="number" id="update-task-id" placeholder="Input Task Id">
+                <label for="update-task-name">Task Name</label>
+                <input type="text" id="update-task-name" placeholder="Input Updated Task">
+                <label for="update-task-status">Status</label>
+                <input type="text" id="update-task-status" placeholder="Input Updated Status">
+                <button id="update-task-button" type="submit">Update Task</button>
+            </fieldset>
+        </form>
         
-        <fieldset>
-            <legend>Delete Task</legend>
-            <label for="task-id">Task Id</label>
-            <input type="number" id="task-id" placeholder="Input Task Id">
-            <br>
-        </fieldset>
-    </form>
+        <form id="delete-task-form">
+            <fieldset>
+                <legend>Delete Task</legend>
+                <label for="delete-task-id">Task Id</label>
+                <input type="number" id="delete-task-id" placeholder="Input Task Id">
+                <button id="delete-task-button" type="submit">Delete Task</button>
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
