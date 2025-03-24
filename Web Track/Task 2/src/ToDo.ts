@@ -5,6 +5,20 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+type TaskStatus = 'Not Started' | 'In-progress' | 'Completed';
+
+interface Task {
+    id: number;
+    name: string;
+    status: TaskStatus;
+}
+
+let tasks: Task[] = [
+    { id: 1, name: 'Task 1', status: 'Not Started' },
+    { id: 2, name: 'Task 2', status: 'In-progress' },
+    { id: 3, name: 'Task 3', status: 'Completed' }
+];
+
 function DisplayAction() {
     console.log("Main Menu");
     console.log("1. See All Tasks");
