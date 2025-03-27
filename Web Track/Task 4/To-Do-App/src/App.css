@@ -97,5 +97,5 @@ li input[type="checkbox"] {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: green; /* Change the checkmark color to green */
+  accent-color: green;
 }
