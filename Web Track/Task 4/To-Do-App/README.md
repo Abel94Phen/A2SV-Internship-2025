@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+# To-Do List Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple **To-Do List** application built with **React** and **TypeScript**. It allows users to manage their tasks by adding, editing, deleting, and marking tasks as completed. The application is styled with CSS for a clean and modern look.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Add Tasks**: Users can add new tasks to the list.
+- **Edit Tasks**: Users can edit the title of existing tasks.
+- **Delete Tasks**: Users can delete tasks from the list.
+- **Mark as Completed**: Users can mark tasks as completed, which applies a strikethrough style.
+- **Responsive Design**: The application is responsive and works well on different screen sizes.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: For building the user interface.
+- **TypeScript**: For type safety and better development experience.
+- **CSS**: For styling the application.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+- **Node.js**: Ensure you have Node.js installed on your system. You can download it from [Node.js Official Website](https://nodejs.org/).
+- **npm**: Comes with Node.js for managing dependencies.
+
+### Installation
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/Abel94Phen/A2SV-Internship-2025/tree/main/Web%20Track/Task%204/To-Do-App
+
+   ```
+
+2. Navigate to the Project Directory
+
+```bash
+cd todo-list
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3.Install the dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm install
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## Running the Application
+
+1. Start the Development Server
+
+```bash
+npm start
+```
+
+2. Open your browser and navigate to:
+
+```bash
+http://localhost:3000
 ```
